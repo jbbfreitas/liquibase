@@ -52,7 +52,7 @@ Figura 1 - Conteúdo da tabela `databasechangelog`
 
 2. Crie o banco de dados e o usuário
 
-  2.1 Abra um shell ou prompt do windows e digite
+  2.1. Abra um shell ou prompt do windows e digite
 ```SQL
 $  postgresql/bin/psql -U postgres
 Password for user postgres: senhaDoUsuarioPostgres
