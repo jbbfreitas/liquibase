@@ -48,6 +48,7 @@ Figura 1 - Conteúdo da tabela `databasechangelog`
 Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante a abaixo.
 
 ![Estrutura de um projeto liquibase](estrutraProjetoLiquibase.png)
+
 Figura 2- Estrutura de um projeto liquibase  
 
 
