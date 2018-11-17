@@ -274,11 +274,11 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
    <strong>Figura 6- Nova estrutura de pastas</strong> 
 </p>
 
-2. Renomeie o changelog `db-changelog-master.xml`para `esquemaInicial.xml`
+2. Renomeie o changelog `db-changelog-master.xml`para `esquemaInicial.xml`. 
 
-3. Grave o changelog `esquemaInicial.xml` na pasta `changelog` recém criada
+3. Grave o changelog `esquemaInicial.xml` na pasta `changelog` recém criada.
 
-4. Agora vamos corrigir o nome da tabela `departmento` para `departamento`. Para isso crie um  changelog denominado `corrigeTabelaDepartamento.xml` e grave-o na pasta `changelog` . O arquivo terá o seguinte conteúdo:
+4. Agora vamos corrigir o nome da tabela `departmento` para `departamento`. Para isso crie um `changelog` denominado `corrigeTabelaDepartamento.xml` e grave-o na pasta `changelog`. O arquivo terá o seguinte conteúdo:
 
 ```xml
 <databaseChangeLog
@@ -335,7 +335,6 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 			constraintName="fk_departamento" referencedColumnNames="id"
 			referencedTableName="departamento" />
 	</changeSet>
-
 
 	<changeSet id="tag-1.2" author="jbbf">
 		<tagDatabase tag="1.2" />
