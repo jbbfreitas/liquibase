@@ -30,7 +30,7 @@ a criação de um novo índice ou a alteração do nome de uma coluna. O liquiba
 ## Conceitos Básicos
 
 ### ChangeSet 
-> Ou  conjunto de mudanças é um agrupamento lógico de alterações no banco de dados. 
+> Também denominado de "conjunto de mudanças" é um agrupamento lógico de alterações no banco de dados. 
 Por exemplo, um conjunto de mudanças pode ter operações para criar uma tabela, 
 renomear uma coluna, adicionar uma chave estrangeira ou qualquer outra operação do banco de dados.
 
