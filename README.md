@@ -348,7 +348,7 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 
 > Observe que o primeiro `changeset` cria a coluna `departamento_id`  na tabela `empregado` e o segundo cria a chave estrangeira que tem como `referenceTableName` a tabela `departmento`. Essa é a tag 1.2
 
-6. Por fim  vamos criar um changelog denominado master.xml que incluirá os demais arquivo changelog. Esse arquivo deverá ser gravado na pasta `liquibase` e conterá o seguinte conteúdo:
+6. Por fim  vamos criar um `changelog` denominado `master.xml` que incluirá os demais arquivos changelog usando a tag `include`. Esse arquivo deverá ser gravado na pasta `liquibase` e conterá o seguinte conteúdo:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
