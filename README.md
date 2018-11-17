@@ -380,7 +380,7 @@ para:
 
 10. Pronto!
 
-#### Desafio :innocent:
+#### Desafio 1 :innocent:
  
 ```
 - Volte para a tag 1.0 usando goal liquibase:rollback (pesquise a sintaxe correta)
@@ -390,6 +390,12 @@ para:
 ```
 
 > Tudo funcionou como esperado?
+
+#### Desafio 2 :innocent:
+ 
+```
+- Usando o liquibase, povoe as as tabelas `empregado` e `departamento`, usando um arquivo `.csv` 
+```
 
 
 
