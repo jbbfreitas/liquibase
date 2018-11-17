@@ -42,7 +42,7 @@ Quando executar o liquibase pela primeira vez, ele irá criar 2 tabelas extras n
  
 ![Conteúdo do arquivo databasechangelog](changeLog_img.png)
 
-**Figura 1 - Conteúdo da tabela `databasechangelog` **
+**Figura 1 - Conteúdo da tabela `databasechangelog`**
 
 
 ## Instalando o Postgresql
@@ -90,6 +90,11 @@ Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há 
 
 2. Crie um projeto simples (sem usar um arquétipo), Figura 4. 
 
+<p align="center">
+  <img src="newMavenProject.png">
+</p>
+
+
 ![Novo Projeto Maven](newMavenProject.png)
 
 **Figura 4- Criando um novo projeto Maven**  
@@ -102,4 +107,6 @@ version    : 0.1.0-SNAPSHOT
 packaging  : jar
 ```
 
-
+{: style="text-align:center"}
+That is, while there is value in the items on
+the right, we value the items on the left more.
