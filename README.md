@@ -253,3 +253,9 @@ password=aquiSuaSenha
    <strong>Figura 5- Banco de Dados na Versão 1.0</strong> 
 </p>
 
+## Corrigindo o nome da tabela e criando um `constraint`
+
+Se você é uma pessoa atenta, deve ter percebido que a tabela `departamento` foi criada como `departmento` :grin:
+
+
+
