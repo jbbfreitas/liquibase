@@ -265,11 +265,48 @@ Vamos então aproveitar essa oportunidade para fazer três coisas:
 
 ::: :walking: Passo a passo :::  
 
-1. Altere a estrutura de pastas do seu projeto para que fique igual ao da Figura 6
+1. Altere a estrutura de pastas do seu projeto para que fique igual à da Figura 6
 
 <p align="center">
   <img src="novaEstruturaPasta.png" alt="Nova estrutura de pastas">
 </p>
 <p align="center">
-   <strong>Figura 5- Nova estrutura de pastas</strong> 
+   <strong>Figura 6- Nova estrutura de pastas</strong> 
 </p>
+
+2. Renomeie o changelog `db-changelog-master.xml`para `esquemaInicial.xml`
+
+3. Grave o changelog `esquemaInicial.xml` na pasta `changelog` recém criada
+
+4. Crie um  changelog denominado `corrigeTabelaDepartamento.xml` e grave-o na pasta `changelog` . O arquivo terá o seguinte conteúdo:
+
+```xml
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<changeSet author="jbbf" id="exclui_departmento">
+		<dropTable cascadeConstraints="true" schemaName="public"
+			tableName="departmento" />
+	</changeSet>
+	<changeSet id="cria_departamento" author="jbbf">
+		<createTable tableName="departamento">
+			<column name="id" type="bigint"
+				autoIncrement="${autoIncrement}">
+				<constraints primaryKey="true" nullable="false" />
+			</column>
+			<column name="nome" type="varchar(50)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+
+	<changeSet id="tag-1.1" author="jbbf">
+		<tagDatabase tag="1.1" />
+	</changeSet>
+
+</databaseChangeLog>
+```
+ 
