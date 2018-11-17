@@ -43,7 +43,7 @@ Quando executar o liquibase pela primeira vez, ele irá criar 2 tabelas extras n
   <img src="changeLog_img.png" alt="Conteúdo do arquivo databasechangelog">
 </p>
 <p align="center">
-   <strong>Figura 1 - Conteúdo da tabela `databasechangelog`</strong> 
+   <strong>Figura 1 - Conteúdo da tabela "databasechangelog"</strong> 
 </p>
 
 
@@ -113,7 +113,66 @@ artifactId : liquibase
 version    : 0.1.0-SNAPSHOT
 packaging  : jar
 ```
+4. Altere o arquivo pom conforme abaixo:
 
-{: style="text-align:center"}
-That is, while there is value in the items on
-the right, we value the items on the left more.
+```xml
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.com.abim</groupId>
+	<artifactId>liquibase</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>liquibase</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- Postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.4-1203-jdbc42</version>
+		</dependency>
+	</dependencies>
+
+
+
+	<build>
+		<finalName>liquibase-demo</finalName>
+		<plugins>
+			<!-- Use Java 1.8 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<!-- User liquibase plugin -->
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<version>3.4.2</version>
+				<configuration>
+					<propertyFile>liquibase/liquibase.properties</propertyFile>
+					<changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
+
+
+```
