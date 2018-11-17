@@ -198,7 +198,7 @@ password=aquiSuaSenha
 ```
 7. Na mesma pasta, crie tambémo arquivo `db-changelog-master.xml` com o seguinte conteúdo:
 
-```
+```xml
 <databaseChangeLog
 	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
