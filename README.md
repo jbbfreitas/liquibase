@@ -86,7 +86,7 @@ Figura 3- Estrutura de um projeto liquibase
 
 ::: :walking: Passo a passo :::  
 
-1. Crie uma 
+1. Crie a seguinte estrutura de pastas em GrupoEstudos
 
 
 
