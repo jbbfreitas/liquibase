@@ -34,13 +34,15 @@ a criação de um novo índice ou a alteração do nome de uma coluna. O liquiba
 Por exemplo, um conjunto de mudanças pode ter operações para criar uma tabela, 
 renomear uma coluna, adicionar uma chave estrangeira ou qualquer outra operação do banco de dados.
 
-Como é que o liquibase identifica um ChangeSet? 
-O changeset é identificado através de 3 elementos: id + autor + nome do arquivo de log de alterações (com caminho). 
+### Como o liquibase identifica um ChangeSet? 
+> O changeset é identificado através de 3 elementos: id + autor + nome do arquivo de log de alterações (com caminho). 
 Quando executar o liquibase pela primeira vez, ele irá criar 2 tabelas extras no seu banco de dados, 
 `databasechangelog` e `databasechangeloglock`.
 
-
+ 
 ![Conteúdo do arquivo databasechangelog](changeLog_img.png)
 Figura 1 - Conteúdo da tabela `databasechangelog` 
 
+## Criando o primeiro projeto usando o liquibase
 
+Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante a abaixo.
