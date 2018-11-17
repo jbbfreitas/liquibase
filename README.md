@@ -94,17 +94,12 @@ Figura 3- Estrutura de um projeto liquibase
 
 Figura 4- Criando um novo projeto Maven  
 
-`mkdir -p src/main/java/br/com/abim/primo/domain` em sistemas `*nix`:
+3. Preencha os campos com:
 ```
-└── src
-    └── main
-        └── java
-            └── br
-                └──com
-                   └──abim
-                      └──primo
-			 └──domain
-                         
-```  
+groupId br.com.abim
+artifactId liquibase
+version 0.1.0-SNAPSHOT
+packaging: jar
+
 
 
