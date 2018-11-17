@@ -32,7 +32,7 @@ a criação de um novo índice ou a alteração do nome de uma coluna. O liquiba
 ### ChangeSet 
 > Também denominado de "conjunto de mudanças" é um agrupamento lógico de alterações no banco de dados. 
 Por exemplo, um conjunto de mudanças pode ter operações para criar uma tabela, 
-renomear uma coluna, adicionar uma chave estrangeira ou qualquer outra operação do banco de dados.
+renomear uma coluna, adicionar uma chave estrangeira ou qualquer outra operação a ser realizada no banco de dados.
 
 ### Como o liquibase identifica um ChangeSet? 
 > O changeset é identificado através de 3 elementos: id + autor + nome do arquivo de log de alterações (com caminho). 
