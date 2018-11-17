@@ -41,6 +41,7 @@ Quando executar o liquibase pela primeira vez, ele irá criar 2 tabelas extras n
 
  
 ![Conteúdo do arquivo databasechangelog](changeLog_img.png)
+
 **Figura 1 - Conteúdo da tabela `databasechangelog` **
 
 
@@ -74,7 +75,6 @@ postgres=# \q
 ![imagem do pgadmin com o novo banco criado](pgadmin.png)
 
 **Figura 2- Imagem do pgadmin com o novo banco criado**  
-
 
 ## Criando um projeto Maven no Eclipse para usar o liquibase
 
