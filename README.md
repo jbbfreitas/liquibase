@@ -45,12 +45,24 @@ Figura 1 - Conteúdo da tabela `databasechangelog`
 
 ## Criando o primeiro projeto usando o liquibase
 
-Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante a abaixo.
+Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 2.
 
 ![Estrutura de um projeto liquibase](estrutraProjetoLiquibase.png)
 
 Figura 2- Estrutura de um projeto liquibase  
 
+
+```
+$  postgresql/bin/psql -U postgres
+Password for user postgres: xxxxxx
+postgres=# create user liquibase;                                                                                                                                 CREATE ROLE
+postgres=# create database liquibase with owner liquibase;
+CREATE DATABASE
+postgres=# alter user liquibase with encrypted password 'liquibase';
+ALTER ROLE
+postgres=# grant all privileges on database liquibase to liquibase ;
+GRANT
+postgres=# \q
 
 
 
