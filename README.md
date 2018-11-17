@@ -183,4 +183,5 @@ packaging  : jar
 				</configuration>
 
 ```
-> Você está informando ao Maven que  na lasta ele deve ler os 2 arquivos de proprieda que estão na pasta `liquibase`
+> Você está informando ao Maven para ler os 2 arquivos de propriedades (recursos) que estão na pasta `liquibase`. Portanto crie a pasta 
+`liquibase` dentro da pasta `src\main\resources`
