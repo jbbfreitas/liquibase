@@ -52,7 +52,7 @@ Figura 1 - Conteúdo da tabela `databasechangelog`
 
 2. Crie o banco de dados e o usuário
 
-- Abra um shell ou prompt do windows e digite
+  2.1 Abra um shell ou prompt do windows e digite
 ```SQL
 $  postgresql/bin/psql -U postgres
 Password for user postgres: senhaDoUsuarioPostgres
@@ -65,6 +65,11 @@ postgres=# grant all privileges on database liquibase to liquibase ;
 GRANT
 postgres=# \q
 ```
+3. Instale o Pgadmin para o seu SO : Mac, Linux ou Windows clicando no link 
+(https://www.pgadmin.org/download/)
+
+
+
 
 ## Criando o  projeto usando o liquibase
 
