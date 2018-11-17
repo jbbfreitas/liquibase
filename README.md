@@ -41,7 +41,7 @@ Quando executar o liquibase pela primeira vez, ele irá criar 2 tabelas extras n
 
  
 ![Conteúdo do arquivo databasechangelog](changeLog_img.png)
-Figura 1 - Conteúdo da tabela `databasechangelog` 
+**Figura 1 - Conteúdo da tabela `databasechangelog` **
 
 
 ## Instalando o Postgresql
@@ -73,7 +73,7 @@ postgres=# \q
 
 ![imagem do pgadmin com o novo banco criado](pgadmin.png)
 
-Figura 2- Imagem do pgadmin com o novo banco criado  
+**Figura 2- Imagem do pgadmin com o novo banco criado**  
 
 
 ## Criando um projeto Maven no Eclipse para usar o liquibase
@@ -82,7 +82,7 @@ Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há 
 
 ![Estrutura de um projeto liquibase](estrutraProjetoLiquibase.png)
 
-Figura 3- Estrutura de um projeto liquibase  
+**Figura 3- Estrutura de um projeto liquibase**  
 
 ::: :walking: Passo a passo :::  
 
@@ -92,7 +92,7 @@ Figura 3- Estrutura de um projeto liquibase
 
 ![Novo Projeto Maven](newMavenProject.png)
 
-Figura 4- Criando um novo projeto Maven  
+**Figura 4- Criando um novo projeto Maven**  
 
 3. Preencha os campos com:
 ```
