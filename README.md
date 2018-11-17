@@ -172,6 +172,9 @@ packaging  : jar
 </project>
 
 ```
+::: :pushpin: Importante :::
+
+> Preste atenção nas configurações abaixo:
 
 ```
 				<configuration>
