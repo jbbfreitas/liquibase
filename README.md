@@ -88,11 +88,11 @@ Figura 3- Estrutura de um projeto liquibase
 
 1. Abra o Eclipse e na pasta GrupoDeEstudo/Liquibase/Primo, crie um projeto Maven: File|New|Other|Maven Project
 
-2. Use o arquétipo 
+2. Crie um projeto simples (sem usar um arquétipo), Figura 4. 
 
 ![Novo Projeto Maven](newMavenProject.png)
 
-Figura 3- Criando um novo projeto Maven  
+Figura 4- Criando um novo projeto Maven  
 
 `mkdir -p src/main/java/br/com/abim/primo/domain` em sistemas `*nix`:
 ```
