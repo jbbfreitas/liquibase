@@ -86,7 +86,22 @@ Figura 3- Estrutura de um projeto liquibase
 
 ::: :walking: Passo a passo :::  
 
-1. Crie a seguinte estrutura de pastas em GrupoEstudos
+1. Abra o Eclipse e na pasta GrupoDeEstudo/Liquibase/Primo, crie um projeto Maven: File|New|Other|Maven Project
 
+2. Use o arquétipo 
+
+
+`mkdir -p src/main/java/br/com/abim/primo/domain` em sistemas `*nix`:
+```
+└── src
+    └── main
+        └── java
+            └── br
+                └──com
+                   └──abim
+                      └──primo
+			 └──domain
+                         
+```  
 
 
