@@ -359,14 +359,14 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
     <include file="config/liquibase/changelog/criaConstraintEmpregado.xml" relativeToChangelogFile="false"/>
 </databaseChangeLog>
 ```
-7. Altere o arquivo `pom.xml` de:
+7. Altere o arquivo `pom.xml` 
 
+de:
 ```xml
 <propertyFile>liquibase/liquibase.properties</propertyFile>
 <changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>
 ```
-para 
-
+para: 
 ```xml
 <propertyFile>config/liquibase/liquibase.properties</propertyFile>
 <changeLogFile>config/liquibase/master.xml</changeLogFile>
