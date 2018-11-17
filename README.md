@@ -46,7 +46,7 @@ Figura 1 - Conteúdo da tabela `databasechangelog`
 
 ## Instalando o Postgresql
 
-
+::: :walking: Passo a passo :::  
 1. Instale o Postgresql para o seu SO : Mac, Linux ou Windows clicando no link 
 (https://www.postgresql.org/download/)
 
@@ -64,9 +64,9 @@ ALTER ROLE
 postgres=# grant all privileges on database liquibase to liquibase ;
 GRANT
 postgres=# \q
+```
 
-
-## Criando o primeiro projeto usando o liquibase
+## Criando o  projeto usando o liquibase
 
 Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 2.
 
@@ -75,7 +75,7 @@ Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há 
 Figura 2- Estrutura de um projeto liquibase  
 
 
-
+Crie uma 
 
 
 
