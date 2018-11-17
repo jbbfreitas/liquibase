@@ -196,6 +196,11 @@ url=jdbc:postgresql://localhost:5432/liquibase
 username=liquibase
 password=aquiSuaSenha
 ```
+::: :pushpin: Importante :::
+
+> Não deixe nenhum espaço em branco no final de cada linha
+
+
 7. Na mesma pasta, crie tambémo arquivo `db-changelog-master.xml` com o seguinte conteúdo:
 
 ```xml
