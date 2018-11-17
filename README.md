@@ -52,13 +52,13 @@ Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há 
 Figura 2- Estrutura de um projeto liquibase  
 
 
-```
+```SQL
 $  postgresql/bin/psql -U postgres
-Password for user postgres: xxxxxx
+Password for user postgres: senhaDoUsuarioPostgres
 postgres=# create user liquibase;                                                                                                                                 CREATE ROLE
 postgres=# create database liquibase with owner liquibase;
 CREATE DATABASE
-postgres=# alter user liquibase with encrypted password 'liquibase';
+postgres=# alter user liquibase with encrypted password 'digiteSuaSenhaAqui';
 ALTER ROLE
 postgres=# grant all privileges on database liquibase to liquibase ;
 GRANT
