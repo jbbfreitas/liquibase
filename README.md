@@ -265,5 +265,11 @@ Vamos então aproveitar essa oportunidade para fazer três coisas:
 
 ::: :walking: Passo a passo :::  
 
-1. Crie uma pasta 
+1. Altere a estrutura de pastas do seu projeto para que fique igual ao da Figura 6
 
+<p align="center">
+  <img src="novaEstruturaPasta.png" alt="Nova estrutura de pastas">
+</p>
+<p align="center">
+   <strong>Figura 5- Nova estrutura de pastas</strong> 
+</p>
