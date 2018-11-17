@@ -372,9 +372,9 @@ para:
 <changeLogFile>config/liquibase/master.xml</changeLogFile>
 ```
 
-8. Como houve mudança de pastas do arquivo `changelog` inicial, precisaremos fazer um `drop cascade` nas tabelas criadas, usando o pgadmin
+8. Como houve mudança de pastas do arquivo `changelog` inicial, precisaremos fazer um `drop cascade` nas tabelas criadas, usando o `pgadmin`.
 
-9. Após executar o `drop cascade`, execute o comando `mvn liquibase:update` 
+9. Após executar o `drop cascade`, execute o comando `mvn liquibase:update`. 
 
 10. Pronto!
 
