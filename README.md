@@ -83,7 +83,9 @@ postgres=# \q
 
 ## Criando um projeto Maven no Eclipse para usar o liquibase
 
-Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 3.
+Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java, pois o nosso objetivo é dar ênfase em como usar o liquibase. 
+
+A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 3.
 
 <p align="center">
   <img src="estrutraProjetoLiquibase.png" alt="Estrutura de um projeto liquibase">
