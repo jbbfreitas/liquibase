@@ -91,11 +91,9 @@ Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há 
 2. Crie um projeto simples (sem usar um arquétipo), Figura 4. 
 
 <p align="center">
-  <img src="newMavenProject.png">
+  <img src="newMavenProject.png" alt="Novo Projeto Maven">
+  <b>Figura 4- Criando um novo projeto Maven</b> 
 </p>
-
-
-![Novo Projeto Maven](newMavenProject.png)
 
 **Figura 4- Criando um novo projeto Maven**  
 
