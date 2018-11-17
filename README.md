@@ -76,9 +76,7 @@ postgres=# \q
 Figura 2- Imagem do pgadmin com o novo banco criado  
 
 
-
-
-## Criando o  projeto usando o liquibase
+## Criando um projeto Maven no Eclipse para usar o liquibase
 
 Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 3.
 
@@ -86,8 +84,9 @@ Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há 
 
 Figura 3- Estrutura de um projeto liquibase  
 
+::: :walking: Passo a passo :::  
 
-Crie uma 
+1. Crie uma 
 
 
 
