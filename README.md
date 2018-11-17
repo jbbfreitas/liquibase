@@ -367,12 +367,10 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 #### Desafio :innocent:
 
 ```
-
-- Pesquise e aplique o goal liquibase:rollback
+- Volte para a tag 1.0 usando goal liquibase:rollback (pesquise a sintaxe correta)
 - Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
-- Volte para a tag 1.2
+- Avance para a tag 1.2
 - Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
-
 ```
 
 > Tudo funcionou como esperado?
