@@ -72,17 +72,23 @@ postgres=# \q
 
 4. Verifique se o pgadmin reconhece o seu novo banco de dados
 
-![imagem do pgadmin com o novo banco criado](pgadmin.png)
-
-**Figura 2- Imagem do pgadmin com o novo banco criado**  
+<p align="center">
+  <img src="pgadmin.png" alt="Imagem do pgadmin com o novo banco criado">
+</p>
+<p align="center">
+   <strong>Figura 2- Imagem do pgadmin com o novo banco criado</strong> 
+</p>
 
 ## Criando um projeto Maven no Eclipse para usar o liquibase
 
 Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 3.
 
-![Estrutura de um projeto liquibase](estrutraProjetoLiquibase.png)
-
-**Figura 3- Estrutura de um projeto liquibase**  
+<p align="center">
+  <img src="estrutraProjetoLiquibase.png" alt="Estrutura de um projeto liquibase">
+</p>
+<p align="center">
+   <strong>Figura 3- Estrutura de um projeto liquibase</strong> 
+</p>
 
 ::: :walking: Passo a passo :::  
 
