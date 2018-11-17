@@ -364,6 +364,19 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 
 8. Após executar o `drop cascade`, execute o comando `mvn liquibase:update` 
 
+#### Desafio :innocent:
+
+```
+
+- Pesquise e aplique o goal liquibase:rollback
+- Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
+- Volte para a tag 1.2
+- Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
+
+```
+
+> Tudo funcionou como esperado?
+
 
 
 
