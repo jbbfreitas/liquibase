@@ -3,7 +3,9 @@
 O Liquibase é uma ferramenta de gerenciamento de versões em banco de dados. 
 
 Ela permite que ao invés de escrever código SQL diretamente no banco de dados para criar, atualizar ou descartar objetos, 
-os desenvolvedores podem definir as alterações desejadas no banco através de arquivos XML.
+os desenvolvedores possam definir as alterações desejadas no banco através de arquivos XML.
+
+Isso é importante por que permite o versionamento da estrutura do banco. 
 
 Qualquer alteração no banco de dados é agrupada em "ChangeSet".
 
@@ -12,8 +14,6 @@ Qualquer alteração no banco de dados é agrupada em "ChangeSet".
 **Como boa prática use um `ChangeSet` para cada modificação no banco,
 permitindo assim poder fazer um `rollback`, para uma versão anterior, facilmente.**
          
-
-
 
 Alterações no banco de dados podem ser gerenciadas. Por exemplo, você pode marcar sua estrutura de banco de dados como um 
 versão 1.0 (criando uma tag) após a primeira execução. 
