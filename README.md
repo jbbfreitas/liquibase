@@ -142,12 +142,10 @@ packaging  : jar
 		</dependency>
 	</dependencies>
 
-
-
 	<build>
 		<finalName>liquibase-demo</finalName>
 		<plugins>
-			<!-- Use Java 1.8 -->
+			<!-- Usar o Java 8 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -158,7 +156,7 @@ packaging  : jar
 				</configuration>
 			</plugin>
 
-			<!-- User liquibase plugin -->
+			<!-- Plugin do liquibase  -->
 			<plugin>
 				<groupId>org.liquibase</groupId>
 				<artifactId>liquibase-maven-plugin</artifactId>
@@ -172,7 +170,5 @@ packaging  : jar
 	</build>
 
 </project>
-
-
 
 ```
