@@ -162,8 +162,8 @@ packaging  : jar
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<version>3.4.2</version>
 				<configuration>
-					<propertyFile>liquibase/liquibase.properties</propertyFile>
-					<changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>
+					**<propertyFile>liquibase/liquibase.properties</propertyFile>**
+					**<changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>**
 				</configuration>
 			</plugin>
 		</plugins>
