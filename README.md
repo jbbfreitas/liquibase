@@ -258,7 +258,7 @@ password=aquiSuaSenha
 Se você é uma pessoa atenta, deve ter percebido que a tabela `departamento` foi criada como `departmento` :grin:
 
 Vamos então aproveitar essa oportunidade para fazer quatro coisas:
-- Corrigir o nome da taela
+- Corrigir o nome da tabela
 - Criar uma chave estrangeira na tabela empregado, indicando o seu departamento
 - Criar tags para as versões do banco
 - Criar um `changelog` denominado `master.xml` que incluirá os demais arquivo `changelog`
