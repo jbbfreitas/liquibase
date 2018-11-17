@@ -40,8 +40,7 @@ Quando executar o liquibase pela primeira vez, ele irá criar 2 tabelas extras n
 `databasechangelog` e `databasechangeloglock`.
 
 
-![GitHub Logo](changeLog_img.png)
-Format: ![Alt Text](url)
-
+![Conteúdo do arquivo databasechangelog](changeLog_img.png)
+Figura 1 - Conteúdo do arquivo databasechangelog]: 
 
 
