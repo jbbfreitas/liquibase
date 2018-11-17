@@ -47,18 +47,12 @@ Figura 1 - Conteúdo da tabela `databasechangelog`
 ## Instalando o Postgresql
 
 
-[Instale o Postgresql para o seu SO : Mac, Linux ou Windows]
+1. Instale o Postgresql para o seu SO : Mac, Linux ou Windows clicando no link 
 (https://www.postgresql.org/download/)
 
-## Criando o primeiro projeto usando o liquibase
+2. Crie o banco de dados e o usuário
 
-Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 2.
-
-![Estrutura de um projeto liquibase](estrutraProjetoLiquibase.png)
-
-Figura 2- Estrutura de um projeto liquibase  
-
-
+- Abra um shell ou prompt do windows e digite
 ```SQL
 $  postgresql/bin/psql -U postgres
 Password for user postgres: senhaDoUsuarioPostgres
@@ -70,6 +64,17 @@ ALTER ROLE
 postgres=# grant all privileges on database liquibase to liquibase ;
 GRANT
 postgres=# \q
+
+
+## Criando o primeiro projeto usando o liquibase
+
+Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 2.
+
+![Estrutura de um projeto liquibase](estrutraProjetoLiquibase.png)
+
+Figura 2- Estrutura de um projeto liquibase  
+
+
 
 
 
