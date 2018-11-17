@@ -43,6 +43,13 @@ Quando executar o liquibase pela primeira vez, ele irá criar 2 tabelas extras n
 ![Conteúdo do arquivo databasechangelog](changeLog_img.png)
 Figura 1 - Conteúdo da tabela `databasechangelog` 
 
+
+## Instalando o Postgresql
+
+Instale o Postgresql para o seu SO : Mac, Linux ou Windows
+
+![https://www.postgresql.org/download/]
+
 ## Criando o primeiro projeto usando o liquibase
 
 Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 2.
