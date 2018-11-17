@@ -188,3 +188,11 @@ packaging  : jar
 5. Crie a pasta  `liquibase` dentro da pasta `src\main\resources`. 
 
 6. Nessa pasta recém criada, crie o arquivo `liquibase.properties` com o seguinte conteúdo:
+
+```
+# Postgresql
+driver=org.postgresql.Driver
+url=jdbc:postgresql://localhost:5432/liquibase 
+username=liquibase
+password=liquibase
+```
