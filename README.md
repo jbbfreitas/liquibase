@@ -244,4 +244,12 @@ password=aquiSuaSenha
 ```
 8. Execute o comando `mvn liquibase:update` 
 
+9. Certifique-se de que as tabelas foram criadas 
+
+<p align="center">
+  <img src="pgadmin_apos_tag1.png" alt="Banco de Dados na Versão 1.0">
+</p>
+<p align="center">
+   <strong>Figura 5- Banco de Dados na Versão 1.0</strong> 
+</p>
 
