@@ -278,7 +278,7 @@ Vamos então aproveitar essa oportunidade para fazer três coisas:
 
 3. Grave o changelog `esquemaInicial.xml` na pasta `changelog` recém criada
 
-4. Crie um  changelog denominado `corrigeTabelaDepartamento.xml` e grave-o na pasta `changelog` . O arquivo terá o seguinte conteúdo:
+4. Agora vamos corrigir o nome da tabela `departmento` para `departamento`. Para isso crie um  changelog denominado `corrigeTabelaDepartamento.xml` e grave-o na pasta `changelog` . O arquivo terá o seguinte conteúdo:
 
 ```xml
 <databaseChangeLog
@@ -309,4 +309,46 @@ Vamos então aproveitar essa oportunidade para fazer três coisas:
 
 </databaseChangeLog>
 ```
- 
+::: :pushpin: Importante :::
+
+> Observe que tivemos que excluir a tabela `departmento` para depois criar uma nova como o nome correto. Essa é a tag 1.1
+
+5. Agora vamos criar a chave estrangeira na tabela `empregado` referenciando a tabela `departamento`. Para isso crie um  changelog denominado `criaConstraintEmpregado.xml` e grave-o na pasta `changelog`. O arquivo terá o seguinte conteúdo:
+
+```xml
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+	<changeSet id="cria_coluna_departamento_id" author="jbbf">
+		<addColumn  schemaName="public" tableName="empregado">
+			<column name="departamento_id" type="bigint" />
+		</addColumn>
+	</changeSet>
+
+
+	<changeSet author="jbbf" id="cria_contraints_empregado">
+		<addForeignKeyConstraint
+			baseColumnNames="departamento_id" baseTableName="empregado"
+			constraintName="fk_departamento" referencedColumnNames="id"
+			referencedTableName="departamento" />
+	</changeSet>
+
+
+	<changeSet id="tag-1.2" author="jbbf">
+		<tagDatabase tag="1.2" />
+	</changeSet>
+
+</databaseChangeLog>
+```
+::: :pushpin: Importante :::
+
+> Observe que o primeiro `changeset` cria a coluna `departamento_id`  na tabela `empregado` e o segundo cria a chave estrangeira que tem como `referenceTableName` a tabela `departmento`. Essa é a tag 1.2
+
+
+
+
+
+
