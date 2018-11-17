@@ -90,6 +90,9 @@ Figura 3- Estrutura de um projeto liquibase
 
 2. Use o arquétipo 
 
+![Novo Projeto Maven](newMavenProject.png)
+
+Figura 3- Criando um novo projeto Maven  
 
 `mkdir -p src/main/java/br/com/abim/primo/domain` em sistemas `*nix`:
 ```
