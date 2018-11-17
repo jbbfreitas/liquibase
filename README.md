@@ -39,10 +39,12 @@ renomear uma coluna, adicionar uma chave estrangeira ou qualquer outra operaçã
 Quando executar o liquibase pela primeira vez, ele irá criar 2 tabelas extras no seu banco de dados, 
 `databasechangelog` e `databasechangeloglock`.
 
- 
-![Conteúdo do arquivo databasechangelog](changeLog_img.png)
-
-**Figura 1 - Conteúdo da tabela `databasechangelog`**
+<p align="center">
+  <img src="changeLog_img.png" alt="Conteúdo do arquivo databasechangelog">
+</p>
+<p align="center">
+   <strong>Figura 1 - Conteúdo da tabela `databasechangelog`</strong> 
+</p>
 
 
 ## Instalando o Postgresql
