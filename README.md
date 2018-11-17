@@ -253,9 +253,17 @@ password=aquiSuaSenha
    <strong>Figura 5- Banco de Dados na Versão 1.0</strong> 
 </p>
 
-## Corrigindo o nome da tabela e criando um `constraint`
+## Corrigindo o nome da tabela e criando uma `constraint`
 
 Se você é uma pessoa atenta, deve ter percebido que a tabela `departamento` foi criada como `departmento` :grin:
 
+Vamos então aproveitar essa oportunidade para fazer três coisas:
+- Corrigir o nome da taela
+- Criar uma chave estrangeira na tabela empregado, indicando o seu departamento
+- Criar tags para as versões do banco
+- Criar um `changelog` denominado `master.xml` que incluirá os demais arquivo `changelog`
 
+::: :walking: Passo a passo :::  
+
+1. Crie uma pasta 
 
