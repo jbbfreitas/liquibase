@@ -184,4 +184,6 @@ packaging  : jar
 
 ```
 > Você está informando ao Maven para ler os 2 arquivos de propriedades (recursos) que estão na pasta `liquibase`. Portanto crie a pasta 
-`liquibase` dentro da pasta `src\main\resources`
+`liquibase` dentro da pasta `src\main\resources`. 
+
+5. Crie primeiramente o arquivo `liquibase.properties` com o seguinte conteúdo:
