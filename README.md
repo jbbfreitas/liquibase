@@ -69,16 +69,22 @@ postgres=# \q
 3. Instale o Pgadmin para o seu SO : Mac, Linux ou Windows clicando no link 
 (https://www.pgadmin.org/download/)
 
+4. Verifique se o pgadmin reconhece o seu novo banco de dados
+
+![imagem do pgadmin com o novo banco criado](pgadmin.png)
+
+Figura 2- Imagem do pgadmin com o novo banco criado  
+
 
 
 
 ## Criando o  projeto usando o liquibase
 
-Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 2.
+Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há classe java. Nós enfatizamos como usar o liquibase. A hierarquia do projeto de demonstração é semelhante à mostrada na Figura 3.
 
 ![Estrutura de um projeto liquibase](estrutraProjetoLiquibase.png)
 
-Figura 2- Estrutura de um projeto liquibase  
+Figura 3- Estrutura de um projeto liquibase  
 
 
 Crie uma 
