@@ -134,7 +134,7 @@ packaging  : jar
 	</properties>
 
 	<dependencies>
-		<!-- Postgresql -->
+		<!-- Dependências do Postgresql -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -162,13 +162,21 @@ packaging  : jar
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<version>3.4.2</version>
 				<configuration>
-					**<propertyFile>liquibase/liquibase.properties</propertyFile>**
-					**<changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>**
+					<propertyFile>liquibase/liquibase.properties</propertyFile>
+					<changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
 
 </project>
+
+```
+
+```
+				<configuration>
+					<propertyFile>liquibase/liquibase.properties</propertyFile>
+					<changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>
+				</configuration>
 
 ```
