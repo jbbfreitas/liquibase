@@ -237,5 +237,6 @@ password=aquiSuaSenha
 </databaseChangeLog>
 
 ```
+8. Execute o comando `mvn liquibase:update` 
 
 
