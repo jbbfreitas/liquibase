@@ -376,6 +376,8 @@ para:
 
 9. Após executar o `drop cascade`, execute o comando `mvn liquibase:update` 
 
+10. Pronto!
+
 #### Desafio :innocent:
  
 ```
