@@ -183,3 +183,4 @@ packaging  : jar
 				</configuration>
 
 ```
+> Você está informando ao Maven que  na lasta ele deve ler os 2 arquivos de proprieda que estão na pasta `liquibase`
