@@ -72,7 +72,7 @@ postgres=# \q
 3. Instale o Pgadmin para o seu SO : Mac, Linux ou Windows clicando no link 
 (https://www.pgadmin.org/download/)
 
-4. Verifique se o pgadmin reconhece o seu novo banco de dados
+4. Execute o `pgadmin` e verifique se o novo banco de dados (denominado `liquibase`), foi realmente criado.
 
 <p align="center">
   <img src="pgadmin.png" alt="Imagem do pgadmin com o novo banco criado">
