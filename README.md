@@ -92,10 +92,9 @@ Primeiro vamos criar um projeto maven no eclipse. Nesta demonstração não há 
 
 <p align="center">
   <img src="newMavenProject.png" alt="Novo Projeto Maven">
-  <b>Figura 4- Criando um novo projeto Maven</b> 
+  <strong>Figura 4- Criando um novo projeto Maven</strong> 
 </p>
 
-**Figura 4- Criando um novo projeto Maven**  
 
 3. Preencha os campos com:
 ```
