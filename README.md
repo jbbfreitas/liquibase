@@ -363,7 +363,7 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 
 ```xml
 <propertyFile>liquibase/liquibase.properties</propertyFile>
-<changeLogFile>liquibase/master.xml</changeLogFile>
+<changeLogFile>liquibase/db-changelog-master.xml</changeLogFile>
 ```
 para 
 
