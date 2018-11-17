@@ -359,12 +359,25 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
     <include file="config/liquibase/changelog/criaConstraintEmpregado.xml" relativeToChangelogFile="false"/>
 </databaseChangeLog>
 ```
-7. Como houve mudança de pastas do arquivo `changelog` inicial, precisaremos fazer um `drop cascade` nas tabelas criadas, usando o pgadmin
+7. Altere o arquivo `pom.xml` de:
 
-8. Após executar o `drop cascade`, execute o comando `mvn liquibase:update` 
+```xml
+<propertyFile>liquibase/liquibase.properties</propertyFile>
+<changeLogFile>liquibase/master.xml</changeLogFile>
+```
+para 
+
+```xml
+<propertyFile>config/liquibase/liquibase.properties</propertyFile>
+<changeLogFile>config/liquibase/master.xml</changeLogFile>
+```
+
+8. Como houve mudança de pastas do arquivo `changelog` inicial, precisaremos fazer um `drop cascade` nas tabelas criadas, usando o pgadmin
+
+9. Após executar o `drop cascade`, execute o comando `mvn liquibase:update` 
 
 #### Desafio :innocent:
-
+ 
 ```
 - Volte para a tag 1.0 usando goal liquibase:rollback (pesquise a sintaxe correta)
 - Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
