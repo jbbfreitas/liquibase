@@ -41,6 +41,6 @@ Quando executar o liquibase pela primeira vez, ele irá criar 2 tabelas extras n
 
 
 ![Conteúdo do arquivo databasechangelog](changeLog_img.png)
-Figura 1 - Conteúdo do arquivo databasechangelog]: 
+Figura 1 - Conteúdo da tabela `databasechangelog` 
 
 
