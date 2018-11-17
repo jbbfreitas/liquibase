@@ -257,7 +257,7 @@ password=aquiSuaSenha
 
 Se você é uma pessoa atenta, deve ter percebido que a tabela `departamento` foi criada como `departmento` :grin:
 
-Vamos então aproveitar essa oportunidade para fazer três coisas:
+Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 - Corrigir o nome da taela
 - Criar uma chave estrangeira na tabela empregado, indicando o seu departamento
 - Criar tags para as versões do banco
@@ -346,6 +346,25 @@ Vamos então aproveitar essa oportunidade para fazer três coisas:
 ::: :pushpin: Importante :::
 
 > Observe que o primeiro `changeset` cria a coluna `departamento_id`  na tabela `empregado` e o segundo cria a chave estrangeira que tem como `referenceTableName` a tabela `departmento`. Essa é a tag 1.2
+
+6. Por fim  vamos criar um changelog denominado master.xml que incluirá os demais arquivo changelog. Esse arquivo deverá ser gravado na pasta `liquibase` e conterá o seguinte conteúdo:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <include file="config/liquibase/changelog/esquemaInicial.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/corrigeTabelaDepartamento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/criaConstraintEmpregado.xml" relativeToChangelogFile="false"/>
+</databaseChangeLog>
+```
+7. Como houve mudança de pastas do arquivo `changelog` inicial, precisaremos fazer um `drop cascade` nas tabelas criadas, usando o pgadmin
+
+8. Após executar o `drop cascade`, execute o comando `mvn liquibase:update` 
+
+
 
 
 
