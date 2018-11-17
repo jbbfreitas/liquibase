@@ -115,7 +115,7 @@ artifactId : liquibase
 version    : 0.1.0-SNAPSHOT
 packaging  : jar
 ```
-4. Altere o arquivo pom conforme abaixo:
+4. Altere o arquivo `pom.xml` conforme abaixo:
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
