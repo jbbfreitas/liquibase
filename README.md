@@ -46,9 +46,9 @@ Figura 1 - Conteúdo da tabela `databasechangelog`
 
 ## Instalando o Postgresql
 
-Instale o Postgresql para o seu SO : Mac, Linux ou Windows
 
-![https://www.postgresql.org/download/]
+[Instale o Postgresql para o seu SO : Mac, Linux ou Windows]
+(https://www.postgresql.org/download/)
 
 ## Criando o primeiro projeto usando o liquibase
 
