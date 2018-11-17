@@ -96,10 +96,10 @@ Figura 4- Criando um novo projeto Maven
 
 3. Preencha os campos com:
 ```
-groupId br.com.abim
-artifactId liquibase
-version 0.1.0-SNAPSHOT
-packaging: jar
-
+groupId    : br.com.abim
+artifactId : liquibase
+version    : 0.1.0-SNAPSHOT
+packaging  : jar
+```
 
 
