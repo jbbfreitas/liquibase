@@ -5,8 +5,8 @@
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
 
-	<changeSet id="cria_departmento" author="jbbf">
-		<createTable tableName="departmento">
+	<changeSet id="cria_departamento" author="jbbf">
+		<createTable tableName="departamento">
 			<column name="id" type="bigint"
 				autoIncrement="${autoIncrement}">
 				<constraints primaryKey="true" nullable="false" />

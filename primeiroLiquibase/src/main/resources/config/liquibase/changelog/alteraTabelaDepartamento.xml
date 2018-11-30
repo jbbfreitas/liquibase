@@ -4,20 +4,10 @@
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-	<changeSet author="jbbf" id="exclui_departmento">
-		<dropTable cascadeConstraints="true" schemaName="public"
-			tableName="departmento" />
-	</changeSet>
-	<changeSet id="cria_departamento" author="jbbf">
-		<createTable tableName="departamento">
-			<column name="id" type="bigint"
-				autoIncrement="${autoIncrement}">
-				<constraints primaryKey="true" nullable="false" />
-			</column>
-			<column name="nome" type="varchar(50)">
-				<constraints nullable="false" />
-			</column>
-		</createTable>
+	<changeSet id="altera_departamento" author="jbbf">
+		<addColumn  schemaName="public" tableName="departamento">
+			<column name="uf" type="varchar(02)" />
+		</addColumn>
 	</changeSet>
 
 	<changeSet id="tag-1.1" author="jbbf">
