@@ -372,16 +372,13 @@ para:
 10. Pronto!
 
 #### Desafio 1 :innocent:
- 
-```
-
 - Usando o liquibase, volte para a tag 1.1 usando  `mvn liquibase:rollback -Dliquibase.rollbackTag='1.1'`
-- Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
-- Usando o liquibase, volte para a tag 1.0 usando goal mvn liquibase:rollback -Dliquibase.rollbackTag='1.0'
-- Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
+- Usando o pgadmin, verifique o conteúdo do arquivo `databasechangelog`
+- Usando o liquibase, volte para a tag 1.0 usando `mvn liquibase:rollback -Dliquibase.rollbackTag='1.0'`
+- Usando o pgadmin, verifique o conteúdo do arquivo `databasechangelog`
 - Avance para a tag 1.2
-- Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
-```
+- Usando o pgadmin, verifique o conteúdo do arquivo `databasechangelog`
+
 
 > Tudo funcionou como esperado?
 
