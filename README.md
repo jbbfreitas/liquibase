@@ -384,7 +384,9 @@ para:
 
 #### Desafio 2 :innocent:
  
-- Usando o liquibase, povoe as as tabelas `empregado` e `departamento`, usando um arquivo `.csv` 
+- Usando o liquibase, povoe as tabela `departamento`, usando um arquivo `.csv` 
+
+- Minha dica: veja este tutorial http://blogs.bytecode.com.au/glen/2013/07/10/liquibase-loaddata-csv-and-conditional-data-loads.html
 
 
 
