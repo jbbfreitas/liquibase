@@ -279,7 +279,7 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 
 3. Grave o changelog `esquemaInicial.xml` na pasta `changelog` recém criada.
 
-4. Agora vamos corrigir o nome da tabela `departmento` para `departamento`. Para isso crie um `changelog` denominado `corrigeTabelaDepartamento.xml` e grave-o na pasta `changelog`. O arquivo terá o seguinte conteúdo:
+4. Agora vamos criar um novo campo na tabela `departmento` denominado `uf`. Para isso crie um `changelog` denominado `alteraTabelaDepartamento.xml` e grave-o na pasta `changelog`. O arquivo terá o seguinte conteúdo:
 
 ```xml
 <databaseChangeLog
@@ -288,20 +288,10 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-	<changeSet author="jbbf" id="exclui_departmento">
-		<dropTable cascadeConstraints="true" schemaName="public"
-			tableName="departmento" />
-	</changeSet>
-	<changeSet id="cria_departamento" author="jbbf">
-		<createTable tableName="departamento">
-			<column name="id" type="bigint"
-				autoIncrement="${autoIncrement}">
-				<constraints primaryKey="true" nullable="false" />
-			</column>
-			<column name="nome" type="varchar(50)">
-				<constraints nullable="false" />
-			</column>
-		</createTable>
+	<changeSet id="altera_departamento" author="jbbf">
+		<addColumn  schemaName="public" tableName="departamento">
+			<column name="uf" type="varchar(02)" />
+		</addColumn>
 	</changeSet>
 
 	<changeSet id="tag-1.1" author="jbbf">
@@ -312,7 +302,7 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 ```
 ::: :pushpin: Importante :::
 
-> Observe que tivemos que excluir a tabela `departmento` para depois criar uma nova como o nome correto. Essa é a tag 1.1
+> Observe que criamos uma nova tag para esse changelog  que altera a tabela `departmento`. Essa é a tag 1.1
 
 5. Agora vamos criar a chave estrangeira na tabela `empregado` referenciando a tabela `departamento`. Para isso crie um  changelog denominado `criaConstraintEmpregado.xml` e grave-o na pasta `changelog`. O arquivo terá o seguinte conteúdo:
 
@@ -355,10 +345,12 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
     <include file="config/liquibase/changelog/esquemaInicial.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/corrigeTabelaDepartamento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/alteraTabelaDepartamento.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/criaConstraintEmpregado.xml" relativeToChangelogFile="false"/>
-</databaseChangeLog>
+ 
+ </databaseChangeLog>
 ```
 7. Altere o arquivo `pom.xml` 
 
@@ -382,7 +374,9 @@ para:
 #### Desafio 1 :innocent:
  
 ```
-- Volte para a tag 1.0 usando goal liquibase:rollback (pesquise a sintaxe correta)
+- Volte para a tag 1.1 usando goal mvn liquibase:rollback -Dliquibase.rollbackTag='1.1'
+- Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
+- Volte para a tag 1.0 usando goal mvn liquibase:rollback -Dliquibase.rollbackTag='1.0'
 - Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
 - Avance para a tag 1.2
 - Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
