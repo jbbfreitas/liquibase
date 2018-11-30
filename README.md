@@ -384,9 +384,8 @@ para:
 
 #### Desafio 2 :innocent:
  
-```
 - Usando o liquibase, povoe as as tabelas `empregado` e `departamento`, usando um arquivo `.csv` 
-```
+
 
 
 
