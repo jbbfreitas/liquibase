@@ -214,7 +214,7 @@ password=aquiSuaSenha
 
 
 	<changeSet id="cria_departmento" author="jbbf">
-		<createTable tableName="departmento">
+		<createTable tableName="departamento">
 			<column name="id" type="bigint"
 				autoIncrement="${autoIncrement}">
 				<constraints primaryKey="true" nullable="false" />
@@ -255,12 +255,11 @@ password=aquiSuaSenha
    <strong>Figura 5- Banco de Dados na Versão 1.0</strong> 
 </p>
 
-## Corrigindo o nome da tabela e criando uma `constraint`
+## Criando mais um campo  na tabela Departamento  e criando uma `constraint`
 
-Se você é uma pessoa atenta, deve ter percebido que a tabela `departamento` foi criada como `departmento` :grin:
 
 Vamos então aproveitar essa oportunidade para fazer quatro coisas:
-- Corrigir o nome da tabela
+- Criar um novo campo na tabela para armazenar a uf 
 - Criar uma chave estrangeira na tabela empregado, indicando o seu departamento
 - Criar tags para as versões do banco
 - Criar um `changelog` denominado `master.xml` que incluirá os demais arquivo `changelog`
