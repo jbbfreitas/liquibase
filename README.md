@@ -214,7 +214,7 @@ password=aquiSuaSenha
 
 
 	<changeSet id="cria_departmento" author="jbbf">
-		<createTable tableName="departmento">
+		<createTable tableName="departamento">
 			<column name="id" type="bigint"
 				autoIncrement="${autoIncrement}">
 				<constraints primaryKey="true" nullable="false" />
@@ -255,12 +255,11 @@ password=aquiSuaSenha
    <strong>Figura 5- Banco de Dados na Versão 1.0</strong> 
 </p>
 
-## Corrigindo o nome da tabela e criando uma `constraint`
+## Criando mais um campo  na tabela Departamento  e criando uma `constraint`
 
-Se você é uma pessoa atenta, deve ter percebido que a tabela `departamento` foi criada como `departmento` :grin:
 
 Vamos então aproveitar essa oportunidade para fazer quatro coisas:
-- Corrigir o nome da tabela
+- Criar um novo campo na tabela para armazenar a uf 
 - Criar uma chave estrangeira na tabela empregado, indicando o seu departamento
 - Criar tags para as versões do banco
 - Criar um `changelog` denominado `master.xml` que incluirá os demais arquivo `changelog`
@@ -280,7 +279,7 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 
 3. Grave o changelog `esquemaInicial.xml` na pasta `changelog` recém criada.
 
-4. Agora vamos corrigir o nome da tabela `departmento` para `departamento`. Para isso crie um `changelog` denominado `corrigeTabelaDepartamento.xml` e grave-o na pasta `changelog`. O arquivo terá o seguinte conteúdo:
+4. Agora vamos criar um novo campo na tabela `departmento` denominado `uf`. Para isso crie um `changelog` denominado `alteraTabelaDepartamento.xml` e grave-o na pasta `changelog`. O arquivo terá o seguinte conteúdo:
 
 ```xml
 <databaseChangeLog
@@ -289,20 +288,10 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-	<changeSet author="jbbf" id="exclui_departmento">
-		<dropTable cascadeConstraints="true" schemaName="public"
-			tableName="departmento" />
-	</changeSet>
-	<changeSet id="cria_departamento" author="jbbf">
-		<createTable tableName="departamento">
-			<column name="id" type="bigint"
-				autoIncrement="${autoIncrement}">
-				<constraints primaryKey="true" nullable="false" />
-			</column>
-			<column name="nome" type="varchar(50)">
-				<constraints nullable="false" />
-			</column>
-		</createTable>
+	<changeSet id="altera_departamento" author="jbbf">
+		<addColumn  schemaName="public" tableName="departamento">
+			<column name="uf" type="varchar(02)" />
+		</addColumn>
 	</changeSet>
 
 	<changeSet id="tag-1.1" author="jbbf">
@@ -313,7 +302,7 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
 ```
 ::: :pushpin: Importante :::
 
-> Observe que tivemos que excluir a tabela `departmento` para depois criar uma nova como o nome correto. Essa é a tag 1.1
+> Observe que criamos uma nova tag para esse changelog  que altera a tabela `departmento`. Essa é a tag 1.1
 
 5. Agora vamos criar a chave estrangeira na tabela `empregado` referenciando a tabela `departamento`. Para isso crie um  changelog denominado `criaConstraintEmpregado.xml` e grave-o na pasta `changelog`. O arquivo terá o seguinte conteúdo:
 
@@ -356,10 +345,12 @@ Vamos então aproveitar essa oportunidade para fazer quatro coisas:
     xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
     <include file="config/liquibase/changelog/esquemaInicial.xml" relativeToChangelogFile="false"/>
-    <include file="config/liquibase/changelog/corrigeTabelaDepartamento.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/alteraTabelaDepartamento.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/criaConstraintEmpregado.xml" relativeToChangelogFile="false"/>
-</databaseChangeLog>
+ 
+ </databaseChangeLog>
 ```
 7. Altere o arquivo `pom.xml` 
 
@@ -381,21 +372,22 @@ para:
 10. Pronto!
 
 #### Desafio 1 :innocent:
- 
-```
-- Volte para a tag 1.0 usando goal liquibase:rollback (pesquise a sintaxe correta)
-- Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
+- Usando o liquibase, volte para a tag 1.1 usando  `mvn liquibase:rollback -Dliquibase.rollbackTag='1.1'`
+- Usando o pgadmin, verifique o conteúdo do arquivo `databasechangelog`
+- Usando o liquibase, volte para a tag 1.0 usando `mvn liquibase:rollback -Dliquibase.rollbackTag='1.0'`
+- Usando o pgadmin, verifique o conteúdo do arquivo `databasechangelog`
 - Avance para a tag 1.2
-- Usando o pgadmin, verifique o conteúdo do arquivo databasechangelog
-```
+- Usando o pgadmin, verifique o conteúdo do arquivo `databasechangelog`
+
 
 > Tudo funcionou como esperado?
 
 #### Desafio 2 :innocent:
  
-```
-- Usando o liquibase, povoe as as tabelas `empregado` e `departamento`, usando um arquivo `.csv` 
-```
+- Usando o liquibase, povoe as tabela `departamento`, usando um arquivo `.csv` 
+
+- Minha dica: veja este tutorial http://blogs.bytecode.com.au/glen/2013/07/10/liquibase-loaddata-csv-and-conditional-data-loads.html
+
 
 
 
