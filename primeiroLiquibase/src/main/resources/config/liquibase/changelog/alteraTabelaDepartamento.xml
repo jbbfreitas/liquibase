@@ -8,6 +8,11 @@
 		<addColumn  schemaName="public" tableName="departamento">
 			<column name="uf" type="varchar(02)" />
 		</addColumn>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/changelog/departamento.csv"
+                  separator=";"
+                  tableName="departamento">
+        </loadData>
 	</changeSet>
 
 	<changeSet id="tag-1.1" author="jbbf">
